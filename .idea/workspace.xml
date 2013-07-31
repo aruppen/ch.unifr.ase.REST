@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="666e2f8f-e7bd-4822-87a1-31f270f6c65b" name="Default" comment="" />
+    <list default="true" id="666e2f8f-e7bd-4822-87a1-31f270f6c65b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+    </list>
     <ignored path="CyberCoachServer2.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/application.html.erb" changelist="666e2f8f-e7bd-4822-87a1-31f270f6c65b" time="1375263184168" ignored="false" />
@@ -31,19 +33,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="3" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0">
+            <state line="15" column="2" selection-start="325" selection-end="325" vertical-scroll-proportion="0.27827647">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.yml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="database.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/database.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="54" selection-start="760" selection-end="760" vertical-scroll-proportion="0.7908163">
+            <state line="31" column="54" selection-start="760" selection-end="760" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -146,9 +148,9 @@
         <option value="$PROJECT_DIR$/app/controllers/posts_controller.rb" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/config/database.yml" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -795,16 +797,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="3" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0">
+        <state line="31" column="54" selection-start="760" selection-end="760" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="54" selection-start="760" selection-end="760" vertical-scroll-proportion="0.7908163">
+        <state line="15" column="2" selection-start="325" selection-end="325" vertical-scroll-proportion="0.27827647">
           <folding />
         </state>
       </provider>
