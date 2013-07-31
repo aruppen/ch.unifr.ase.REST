@@ -76,7 +76,6 @@ GEM
     minitest (4.7.5)
     multi_json (1.7.7)
     multi_xml (0.5.4)
-    mysql (2.9.1)
     netrc (0.7.7)
     pg (0.16.0)
     polyglot (0.3.3)
@@ -153,7 +152,6 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   less-rails
-  mysql
   pg
   rails (= 4.0.0)
   sass-rails (~> 4.0.0)
