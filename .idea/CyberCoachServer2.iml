@@ -22,6 +22,7 @@
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v4.0.0, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activerecord-deprecated_finders (v1.0.3, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v4.0.0, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="addressable (v2.3.5, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v4.0.0, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="atomic (v1.1.10, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.1.4, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
@@ -31,13 +32,17 @@
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.6.3, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="commonjs (v0.2.6, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="excon (v0.25.3, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v1.4.0, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="heroku (v2.39.5, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="heroku-api (v0.3.14, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.3, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="httparty (v0.11.0, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.4, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jbuilder (v1.5.0, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v3.0.4, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="json (v1.8.0, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="launchy (v2.3.0, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="less (v2.3.2, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="less-rails (v2.3.3, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="libv8 (v3.11.8.17, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
@@ -47,6 +52,7 @@
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.7.7, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_xml (v0.5.4, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mysql (v2.9.1, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="netrc (v0.7.7, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pg (v0.16.0, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.3, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.5.2, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
@@ -56,6 +62,8 @@
     <orderEntry type="library" scope="PROVIDED" name="rake (v10.1.0, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.12.2, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ref (v1.0.5, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rest-client (v1.6.7, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubyzip (v0.9.9, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.2.10, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v4.0.0, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sdoc (v0.3.20, RVM: ruby-2.0.0-p247 [CyberCoach]) [gem]" level="application" />
