@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="666e2f8f-e7bd-4822-87a1-31f270f6c65b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/CyberCoachServer2.iml" afterPath="$PROJECT_DIR$/.idea/CyberCoachServer2.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
     </list>
     <ignored path="CyberCoachServer2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -15,6 +12,7 @@
     <file path="/application.css" changelist="666e2f8f-e7bd-4822-87a1-31f270f6c65b" time="1375271031387" ignored="false" />
     <file path="/application_helper.rb" changelist="666e2f8f-e7bd-4822-87a1-31f270f6c65b" time="1375270453560" ignored="false" />
     <file path="/Dummy.txt" changelist="666e2f8f-e7bd-4822-87a1-31f270f6c65b" time="1375272317410" ignored="false" />
+    <file path="/production.rb" changelist="666e2f8f-e7bd-4822-87a1-31f270f6c65b" time="1375273071643" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,10 +32,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="3" selection-start="249" selection-end="249" vertical-scroll-proportion="0.25510204">
+            <state line="10" column="3" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="production.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="30" selection-start="1277" selection-end="1277" vertical-scroll-proportion="0.7397959">
               <folding />
             </state>
           </provider>
@@ -141,6 +148,7 @@
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/config/environments/production.rb" />
       </list>
     </option>
   </component>
@@ -775,7 +783,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="3" selection-start="249" selection-end="249" vertical-scroll-proportion="0.25510204">
+        <state line="10" column="3" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="30" selection-start="1277" selection-end="1277" vertical-scroll-proportion="0.7397959">
           <folding />
         </state>
       </provider>
