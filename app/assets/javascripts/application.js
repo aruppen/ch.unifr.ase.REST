@@ -12,8 +12,15 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.core
 //= require twitter/bootstrap
 //= require turbolinks
 //= require dataTables/jquery.dataTables
+//= require dataTables/jquery.dataTables.bootstrap
+//= require dataTables/extras/TableTools
 //= require_tree .
 
+
+$.extend( $.fn.dataTableExt.oStdClasses, {
+    "sWrapper": "dataTables_wrapper form-inline"
+} );
