@@ -1,5 +1,9 @@
 CyberCoachServer2::Application.routes.draw do
+
+
   resources :posts
+  resources :patients
+  resources :caregivers
 
   get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
