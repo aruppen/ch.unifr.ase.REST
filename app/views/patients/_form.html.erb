@@ -1,0 +1,22 @@
+<%= form_for @patient, :html => { :class => 'form-horizontal' } do |f| %>
+    <div class="control-group">
+      <%= f.label :lastName, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :lastName, :class => 'text_field' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :firstName, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :firstName, :class => 'text_field' %>
+      </div>
+    </div>
+
+
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  posts_path, :class => 'btn' %>
+    </div>
+<% end %>

@@ -1,0 +1,9 @@
+<%- model_class = Caregiver -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => model_class.model_name.human.titleize %></h1>
+</div>
+
+<%= render :partial => 'form' %>
+
+<%= link_to 'Show', @caregiver %> |
+<%= link_to 'Back', caregivers_path %>
