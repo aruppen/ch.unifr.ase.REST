@@ -4,8 +4,13 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    #@posts = Post.order(sort_column + " " + sort_direction)
     @posts = Post.order(sort_column + ' ' + sort_direction)
+
+    respond_to do |format|
+      format.html #index.html.erb
+      format.json {render json: @posts}
+      format.xml {render xml: @posts}
+    end
   end
 
   # GET /posts/1
@@ -31,6 +36,7 @@ class PostsController < ApplicationController
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render action: 'show', status: :created, location: @post }
+        format.xml { render xml: @post, status: :created}
       else
         format.html { render action: 'new' }
         format.json { render json: @post.errors, status: :unprocessable_entity }
