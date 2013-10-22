@@ -71,6 +71,8 @@ class Patient < Api::Base
 #
 #headers['Accept'] = 'application/json'
 
+  self.primary_key = 'pid'
+
   class << self
     def instantiate_collection(collection, prefix_options = {}, b = nil)
       collection = collection['listOfPatient']['patient'] if collection.instance_of?(Hash)
