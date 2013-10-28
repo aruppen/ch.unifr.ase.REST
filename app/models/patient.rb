@@ -71,6 +71,9 @@ class Patient < Api::Base
 #
 #headers['Accept'] = 'application/json'
 
+  # To handle the issue with getting the resources by name (e.g. ../resources/sports/Running not ../sports/1)
+  # you can set the primary_key to the created api class extending the ActiveResource::Base class.
+
   self.primary_key = 'pid'
 
   class << self

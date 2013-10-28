@@ -1,4 +1,8 @@
 class Api::Base < ActiveResource::Base
+
+  #### More information about how to work with ActiveResource::Base can be found on GitHub
+  #### https://github.com/rails/activeresource/blob/master/lib/active_resource/base.rb
+
   self.site='http://diufpc46.unifr.ch:8080/eHealthServer/resources/'
   #self.site = 'http://diufpc46.unifr.ch:8080'
   #self.prefix = ''
