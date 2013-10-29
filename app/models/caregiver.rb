@@ -63,12 +63,13 @@ class Caregiver < Api::Base
 #  #end
 #
 #
-#  self.site = 'http://diufpc46.unifr.ch:8080'
-#  self.prefix = '/eHealthServer/resources/'
+  self.site = 'http://diufpc46.unifr.ch:8080'
+  self.prefix = '/eHealthServer/resources/'
 #
 #  #### Either this
-#  self.user = "admin"
+  self.user = "admin"
 #  self.password = "4dm1n1d"
+  self.password = "d1n1md4"
 #
 #  #### Or this
 #  #headers['Authorization'] = 'Basic YWRtaW46NGRtMW4xZA=='

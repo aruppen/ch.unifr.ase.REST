@@ -1,6 +1,8 @@
 CyberCoachServer2::Application.routes.draw do
 
 
+  resources :users
+
   resources :posts
   resources :patients
   resources :caregivers

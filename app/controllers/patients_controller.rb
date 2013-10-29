@@ -9,7 +9,8 @@ class PatientsController < ApplicationController
     #@patients = Patient.order(sort_column + ' ' + sort_direction)
     #@patients = Patient.all(:all, :params => {:start => params[:start], :size => params[:size]})
     #@patients = Patient.all(:all)
-    @patients = Patient.all()
+    #@patients = Patient.all()
+    @patients = Patient.find(:all, :params => {:start => params[:start], :size => params[:size]})
   end
 
   # GET /posts/1
@@ -24,12 +25,13 @@ class PatientsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+
   end
 
   # POST /posts
   # POST /posts.json
   def create
-    @patient = Patient.new(post_params).save
+    @patient = Patient.create(:firstName => post_params[:firstName], :lastName => post_params[:lastName], :gender => post_params[:gender], :insuranceCompany => post_params[:insuranceCompany])
     respond_to do |format|
       if @patient.save
         format.html { redirect_to @patient, notice: 'Post was successfully created.' }
@@ -74,7 +76,7 @@ class PatientsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def post_params
-    params.require(:patient).permit(:lastName, :firstName)
+    params.require(:patient).permit(:lastName, :firstName, :insuranceCompany, :gender)
   end
 
   def sort_column

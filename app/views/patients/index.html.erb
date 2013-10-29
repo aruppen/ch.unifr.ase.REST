@@ -22,8 +22,7 @@
         <td><%= patient.firstName %></td>
         <td><%= patient.lastName %></td>
         <td><%= patient.gender %></td>
-        <td><%= link_to('Edit', { :action => "edit", :id => patient.pid },
-                        :method => :put) %></td>
+        <td><%=link_to('Edit', edit_patient_path(patient.pid)) %></td>
         <td><%= link_to("Delete article", { :action => "destroy", :id => patient.pid },
                         :confirm => "Are you sure you want to delete this article?",
                         :method => :delete) %></td>
