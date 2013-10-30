@@ -22,7 +22,7 @@ class User  < Api::Base
   end
 
   schema do
-    string 'uri', 'username', 'password', 'realname', 'email' 'subscriptions', 'partnerships'
+    string 'uri', 'username', 'password', 'realname', 'email', 'subscriptions', 'partnerships'
     integer 'publicvisible'
   end
 

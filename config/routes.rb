@@ -4,7 +4,8 @@ CyberCoachServer2::Application.routes.draw do
   resources :subscriptions
 
   resources :users do
-    resources :subscriptions, :path => '',  :except => [:index]
+    #resources :subscriptions, :path => '',  :except => [:index]
+    resources :subscriptions
   end
 
   resources :posts

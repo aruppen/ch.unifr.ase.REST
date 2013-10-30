@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    User.user = 'newuser2'
+    #User.user = 'newuser2'
   #@user = User.find(:id)
   #rescue ActiveResource::ResourceNotFound
   #  redirect_to :action => 'not_found'
