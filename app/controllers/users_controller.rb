@@ -9,18 +9,13 @@ class UsersController < ApplicationController
       params[:start] = 0
       params[:size] = 20
     end
-    @users = User.find(:all)#, :params => {:start => params[:start], :size => params[:size]})
+    @users = User.find(:all) #, :params => {:start => params[:start], :size => params[:size]})
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
-    #User.user = 'newuser2'
-  #@user = User.find(:id)
-  #rescue ActiveResource::ResourceNotFound
-  #  redirect_to :action => 'not_found'
-  #rescue ActiveResource::ResourceConflict, ActiveResource::ResourceInvalid
-  #  redirect_to :action => 'new'
+    #nothing to do since we have the set_user method
   end
 
   # GET /users/new
@@ -30,6 +25,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    #nothing to do since we have the set_user method
   end
 
   # POST /users
@@ -44,12 +40,17 @@ class UsersController < ApplicationController
         @user.password = nil
       end
 
+      begin
+        status = @user.save!
+      rescue ActiveResource::UnauthorizedAccess
+        status = false
+      end
 
-
-      if @user.save!
+      if status
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
         format.json { head :no_content }
       else
+        flash[:error] = "Count not create the new user"
         format.html { render action: 'edit' }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
@@ -71,13 +72,18 @@ class UsersController < ApplicationController
       end
 
 
+      begin
+        status = @user.save
+      rescue ActiveResource::UnauthorizedAccess
+        status = false
+      end
 
-      if @user.save
+      if status
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
         format.json { head :no_content }
       else
-        #format.html { render action: 'edit' }
-        format.html { redirect_to @user, notice: 'Could not update.' }
+        flash[:error] = "Count not update"
+        format.html { redirect_to @user }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
@@ -86,25 +92,48 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
-    @user.destroy
+    begin
+      status = @user.destroy
+    rescue ActiveResource::UnauthorizedAccess
+      status = false
+    end
+
     respond_to do |format|
-      format.html { redirect_to users_url }
-      format.json { head :no_content }
+      if status
+        format.html { redirect_to users_url }
+        format.json { head :no_content }
+      else
+        flash[:error] = "Could not delete"
+        format.html { redirect_to @user }
+        format.json { render json: @users.errors, status: "Could not delete" }
+      end
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      User.user = session[:user_id]
-      User.password = session[:passwd]
-      @user = User.find(params[:id])
-    end
+  def not_found
+    flash[:error] = 'No user found'
+    redirect_to :action => 'index'
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def user_params
-      params.require(:user).permit(:uri, :username, :password, :realname, :email, :publicvisible)
+  private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_user
+    User.user = session[:user_id]
+    User.password = session[:passwd]
+    #@user = User.find(params[:id])
+    begin
+      @user = User.find(params[:id])
+    rescue ActiveResource::ResourceNotFound
+      redirect_to :action => 'not_found'
+    rescue ActiveResource::ResourceConflict, ActiveResource::ResourceInvalid
+      redirect_to :action => 'new'
     end
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def user_params
+    params.require(:user).permit(:uri, :username, :password, :realname, :email, :publicvisible)
+  end
 
   def sort_column
     Post.column_names.include?(params[:sort]) ? params[:sort] : "title"

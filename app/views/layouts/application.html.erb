@@ -54,9 +54,10 @@
                      <li>
                   <%= link_to "Logout", session_path(session), :method => :delete %>
                      </li>
+                  <li>
+                    <%= link_to "Profile", user_path(current_user) %>
+                  </li>
               <% end %>
-              <li><%= link_to "Posts", "/posts"  %></li>
-              <li><%= link_to "Users", "/users"  %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -69,14 +70,7 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Sidebar</li>
-              <% if current_user.nil? %>
-                  <li><%= link_to "Login", new_session_path %></li>
-                  <li><%= link_to "Signup", new_user_path %></li>
-              <% else %>
-                  <li>
-                    <%= link_to "Logout", session_path(session), :method => :delete %>
-                  </li>
-              <% end %>
+
               <li><%= link_to "Posts", "/posts"  %></li>
               <li><%= link_to "Users", "/users"  %></li>
             </ul>

@@ -6,9 +6,14 @@ CyberCoachServer2::Application.routes.draw do
   resources :users do
     #resources :subscriptions, :path => '',  :except => [:index]
     resources :subscriptions
+    collection do
+      get :not_found
+    end
   end
 
   resources :posts
+
+
 
 
   get "welcome/index"
