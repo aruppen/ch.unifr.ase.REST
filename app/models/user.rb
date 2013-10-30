@@ -1,11 +1,11 @@
 require 'active_resource'
 class User  < Api::Base
-  self.site = 'http://diufvm31.unifr.ch:8090'
+  #self.site = 'http://diufvm31.unifr.ch:8090'
   #self.site = 'http://diufpc46.unifr.ch:8080'
   self.prefix = '/CyberCoachServer/resources/'
 
-  self.user = "newuser1"
-  self.password = "newuser"
+  #self.user = "newuser1"
+  #self.password = "newuser"
 
   # To handle the issue with getting the resources by name (e.g. ../resources/sports/Running not ../sports/1)
   # you can set the primary_key to the created api class extending the ActiveResource::Base class.

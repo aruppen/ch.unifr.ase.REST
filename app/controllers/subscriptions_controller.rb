@@ -69,6 +69,10 @@ class SubscriptionsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_subscription
+      #Subscription.user = session[:user_id]
+      #Subscription.password = session[:passwd]
+      Api::Base.user = session[:user_id]
+      Api::Base.password = session[:passwd]
       @subscription = Subscription.find(params[:id], :params => { :user_id => params[:user_id]})
     end
 
