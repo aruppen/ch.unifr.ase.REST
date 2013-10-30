@@ -1,0 +1,32 @@
+<%- model_class = Subscription -%>
+<div class="page-header">
+  <h1><%= t '.title', :default => model_class.model_name.human.titleize %></h1>
+
+  <p id="notice"><%= notice %></p>
+</div>
+
+<dl class="dl-horizontal">
+
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @subscription.sport.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:publicvisible) %>:</strong></dt>
+  <dd><%= @subscription.publicvisible %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:username) %>:</strong></dt>
+  <dd><%= @subscription.user.username %></dd>
+
+</dl>
+
+<h2> Training Sessions </h2>
+<ul>
+<% if not @subscription.entries.nil? %>
+      <% @subscription.entries.each do |entry| %>
+
+          <li><%= link_to entry.attributes[entry.attributes.keys[0]].attributes['id'], request.path+"/"+entry.attributes[entry.attributes.keys[0]].attributes['id'].to_s %></li>
+
+
+      <% end %>
+<% end %>
+</ul>
+                                                              >
+<%= link_to 'Edit', edit_subscription_path(@subscription) %> |
+<%= link_to 'Back', user_path(@user) %>
