@@ -33,25 +33,25 @@ class UsersController < ApplicationController
   def create
     respond_to do |format|
 
-      @user = User.new({:username => user_params[:username], :email => user_params[:email], :publicvisible => user_params[:publicvisible], :realname => user_params[:realname], :password => user_params[:password]}, true)
-      if user_params[:password] != '*'
-        @user.password = user_params[:password]
-      else
-        @user.password = nil
-      end
+      #@user = User.new({:username => user_params[:username], :email => user_params[:email], :publicvisible => user_params[:publicvisible], :realname => user_params[:realname], :password => user_params[:password]}, true)
+      #if user_params[:password] != '*'
+      #  @user.password = user_params[:password]
+      #else
+      #  @user.password = nil
+      #end
+      @user = User.new(user_params, true)
 
       begin
         status = @user.save!
-      rescue ActiveResource::UnauthorizedAccess
+      rescue ActiveResource::UnauthorizedAccess,  ActiveResource::ResourceConflict
         status = false
       end
 
       if status
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.html { redirect_to :controller => 'sessions', :action => 'new',  notice: 'User was successfully Created.' }
         format.json { head :no_content }
       else
-        flash[:error] = "Count not create the new user"
-        format.html { render action: 'edit' }
+        format.html { render action: 'edit', alert: "Could not Create" }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
@@ -82,8 +82,7 @@ class UsersController < ApplicationController
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
         format.json { head :no_content }
       else
-        flash[:error] = "Count not update"
-        format.html { redirect_to @user }
+        format.html { redirect_to @user, alert: "Could not update" }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
@@ -100,11 +99,12 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if status
-        format.html { redirect_to users_url }
+        session.destroy
+        #format.html { redirect_to :controller => 'sessions', :id => session.id, :action => 'destroy' }
+        format.html {redirect_to root_path}
         format.json { head :no_content }
       else
-        flash[:error] = "Could not delete"
-        format.html { redirect_to @user }
+        format.html { redirect_to @user, alert: "Could not delete"}
         format.json { render json: @users.errors, status: "Could not delete" }
       end
     end

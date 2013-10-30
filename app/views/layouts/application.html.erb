@@ -47,17 +47,20 @@
           <a class="brand" href="#">CyberCoachServer2</a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
+
               <% if current_user.nil? %>
                   <li><%= link_to "Login", new_session_path %></li>
                   <li><%= link_to "Signup", new_user_path %></li>
               <% else %>
-                     <li>
-                  <%= link_to "Logout", session_path(session), :method => :delete %>
-                     </li>
+                  <li>
+                    <%= link_to "Logout", session_path(session), :method => :delete %>
+                  </li>
                   <li>
                     <%= link_to "Profile", user_path(current_user) %>
                   </li>
               <% end %>
+
+
             </ul>
           </div><!--/.nav-collapse -->
         </div>
