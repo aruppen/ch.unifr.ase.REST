@@ -1,3 +1,4 @@
+require 'rest-client'
 class SessionsController < ApplicationController
   def new
 
@@ -5,10 +6,17 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find(params[:username])
-    if user #&& user.authenticate(params[:password])  #TODO verify with the CyberCoach Server if username/password is valid
-      if
-      session[:user_id] = user.username
-      session[:passwd] = params[:passwd]
+    begin
+      digest = Base64.encode64(params[:user_id]+':'+params[:passwd])
+      RestClient.get 'http://diufvm31.unifr.ch:8090/CyberCoachServer/resources/authenticateduser/', :Authorization => 'Basic '+digest
+      status = true
+    rescue Exception => e
+      status=false
+    end
+
+    if user && status
+      if session[:user_id] = user.username
+        session[:passwd] = params[:passwd]
         redirect_to user_path(user), :notice => "Logged in!"
       end
     else
@@ -19,7 +27,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    session[:passwd]  = nil
+    session[:passwd] = nil
     redirect_to root_url, :notice => "Logged out!"
   end
 end

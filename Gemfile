@@ -58,11 +58,10 @@ end
 gem 'therubyracer', platforms: :ruby
 gem 'less-rails' #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem 'twitter-bootstrap-rails'
-#gem 'httparty'
-
-  gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
-  gem 'jquery-ui-rails'
-
+# We use RestClient for the login
+gem 'rest-client'
+gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
+gem 'jquery-ui-rails'
 #gem 'rest-client'
 gem 'activeresource', :require => 'active_resource'
 #gem 'json'
