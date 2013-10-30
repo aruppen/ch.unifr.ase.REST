@@ -3,19 +3,22 @@ class Api::Base < ActiveResource::Base
   #### More information about how to work with ActiveResource::Base can be found on GitHub
   #### https://github.com/rails/activeresource/blob/master/lib/active_resource/base.rb
 
-  self.site='http://diufpc46.unifr.ch:8080/eHealthServer/resources/'
-  #self.site = 'http://diufpc46.unifr.ch:8080'
-  #self.prefix = ''
+  self.site='http://diufvm31.unifr.ch:8090'
+  self.prefix = '/CyberCoachServer/resources/'
+
   #### Either this
-  #self.user = "admin"
-  #sself.password = "4dm1n1d"
-  self.format = :json
+  #self.user = "newuser1"
+  #sself.password = "newuser"
 
   #### Or this
   #headers['Authorization'] = 'Basic YWRtaW46NGRtMW4xZA=='
 
 
-  headers['Accept'] = 'application/json'
+  #### Either this
+  #headers['Accept'] = 'application/json'
+
+  #### Or this
+  self.format = :json
 
 
   # Strip .xml extension off generated URLs
