@@ -18,7 +18,7 @@
 
 <h2>Subscriptions</h2>
 <ul>
-  <% if not @user.subscriptions.nil? %>
+  <% if not @user.attributes['subscriptions'].nil? %>
       <% @user.subscriptions.each do |sub| %>
 
           <li><%= link_to sub.attributes["uri"].split('/').last, user_path+"/"+sub.attributes["uri"].split('/').last %></li>
