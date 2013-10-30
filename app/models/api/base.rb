@@ -14,10 +14,8 @@ class Api::Base < ActiveResource::Base
   #headers['Authorization'] = 'Basic YWRtaW46NGRtMW4xZA=='
 
 
-  #### Either this
-  #headers['Accept'] = 'application/json'
 
-  #### Or this
+  headers['Accept'] = 'application/json'
   self.format = :json
 
 

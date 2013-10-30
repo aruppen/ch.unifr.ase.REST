@@ -1,6 +1,7 @@
 require 'active_resource'
 class User  < Api::Base
   self.site = 'http://diufvm31.unifr.ch:8090'
+  #self.site = 'http://diufpc46.unifr.ch:8080'
   self.prefix = '/CyberCoachServer/resources/'
 
   self.user = "newuser1"
