@@ -76,7 +76,8 @@ class UsersController < ApplicationController
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        #format.html { render action: 'edit' }
+        format.html { redirect_to @user, notice: 'Could not update.' }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
@@ -95,6 +96,8 @@ class UsersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
+      User.user = session[:user_id]
+      User.password = session[:passwd]
       @user = User.find(params[:id])
     end
 
