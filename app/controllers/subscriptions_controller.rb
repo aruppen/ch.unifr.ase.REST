@@ -15,6 +15,7 @@ class SubscriptionsController < ApplicationController
     #@subscription = Subscription.find(:all, :params => {:sport => "Cycling", :user_id => 'newuser1'})
     @subscription = Subscription.find(params[:id], :params => { :user_id => params[:user_id]})
     @user = User.find(params[:user_id])
+    logger.debug(@subscription.http_response['Date'])
   end
 
   # GET /subscriptions/new

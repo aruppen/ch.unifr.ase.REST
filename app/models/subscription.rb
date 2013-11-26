@@ -14,6 +14,8 @@ class Subscription < Api::Base
 
   # singular name of the resource. you only need to specify this if this class name is not the resource name
   self.element_name = ''
+  # define a callback method for accessing header information in the response
+  add_response_method :http_response
 
   class << self
     def instantiate_collection(collection, prefix_options = {}, b = nil)

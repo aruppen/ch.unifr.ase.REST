@@ -30,6 +30,8 @@ GEM
       activemodel (~> 4.0)
       activesupport (~> 4.0)
       rails-observers (~> 0.1.1)
+    activeresource-response (1.0.1)
+      activeresource (>= 4.0.0)
     activesupport (4.0.0)
       i18n (~> 0.6, >= 0.6.4)
       minitest (~> 4.2)
@@ -159,6 +161,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeresource
+  activeresource-response
   coffee-rails (~> 4.0.0)
   heroku
   jbuilder (~> 1.2)
