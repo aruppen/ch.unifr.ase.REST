@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
   def create
     user = User.find(params[:username])
     begin
-      digest = Base64.encode64(params[:user_id]+':'+params[:passwd])
+      digest = Base64.encode64(params[:username]+':'+params[:passwd])
       RestClient.get 'http://diufvm31.unifr.ch:8090/CyberCoachServer/resources/authenticateduser/', :Authorization => 'Basic '+digest
       status = true
     rescue Exception => e

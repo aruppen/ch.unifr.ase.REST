@@ -16,6 +16,26 @@ class SubscriptionsController < ApplicationController
     @subscription = Subscription.find(params[:id], :params => { :user_id => params[:user_id]})
     @user = User.find(params[:user_id])
     logger.debug(@subscription.http_response['Date'])
+    #Subscription.element_name ="Cycling"
+    #@sub = Subscription.new({:publicvisible=>0, :sport=>"Cycling"}, true)
+    @sub = Subscription.new({:publicvisible=>0}, true)
+    #@sub = Subscription.new(:sport_name => "Cycling")
+    #@user = User.new({:username => "newuser37", :email => "newuser37@gmail.com", :publicvisible => 0, :realname => "b", :password => "newuser"}, true)
+    #@sub.id = "Cycling"
+    #@sub = Subscription.new
+    @sub = Subscription.new(:publicvisible=>"0")
+    @sub.prefix_options[:user_id] = params[:user_id]
+
+    #@sub.sport = 'Cycling'
+    #@sub.collection_path='newuser1'
+    #@sub = Subscription.new({:params => { :user_id => params[:user_id]}}, true)
+    @sub.publicvisible = 0
+    logger.debug("new")
+    logger.debug(@sub.new?)
+    logger.debug("persisted")
+    logger.debug(@sub.persisted?)
+    #@user.save!
+    @sub.save!
   end
 
   # GET /subscriptions/new
